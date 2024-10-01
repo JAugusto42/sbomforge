@@ -1,0 +1,16 @@
+/target/
+**/*.rs.bk
+Cargo.lock
+.idea/
+/*.iml
+/out/
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+*.old
+*.orig
+/*.profraw
+.vscode/
+*.rs.bk
