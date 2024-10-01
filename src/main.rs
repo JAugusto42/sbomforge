@@ -3,7 +3,7 @@ mod parsers;
 mod output;
 
 use clap::Parser;
-use parsers::{cargo::parse_cargo_toml, npm::parse_npm_package_json, pip::parse_pip_requirements};
+use parsers::{cargo::parse_cargo_toml, npm::parse_npm_package_json, pip::parse_setup_py};
 use sbom::SBOM;
 use output::json::generate_sbom_json;
 
@@ -28,7 +28,7 @@ fn main() {
     let sbom = match args.project_type.as_str() {
         "cargo" => parse_cargo_toml(&args.path),
         "npm" => parse_npm_package_json(&args.path),
-        "pip" => parse_pip_requirements(&args.path),
+        "pip" => parse_setup_py(&args.path),
         _ => Err("Unsupported project type".into()),
     };
 
