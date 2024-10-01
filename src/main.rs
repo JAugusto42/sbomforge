@@ -4,7 +4,6 @@ mod output;
 
 use clap::Parser;
 use parsers::{cargo::parse_cargo_toml, npm::parse_npm_package_json, pip::parse_setup_py};
-use sbom::SBOM;
 use output::json::generate_sbom_json;
 
 #[derive(Parser, Debug)]

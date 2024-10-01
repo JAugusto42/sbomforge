@@ -1,4 +1,4 @@
-use std::process::{Command, Stdio};
+use std::process::Command;
 use crate::sbom::{Dependency, SBOM};
 
 pub fn parse_setup_py(file_path: &str) -> Result<SBOM, Box<dyn std::error::Error>> {
